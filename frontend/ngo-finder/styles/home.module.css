@@ -1,0 +1,104 @@
+/* PLEASE IGNORE THE COMMENTS AS THEY ARE FOR LEARNING PURPOSES */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem; 
+    color: #ffffff;
+    background-color: #393e46;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.gradient_text{
+    font-size: 1.50rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #1e90ff, #7b68ee);
+    -webkit-background-clip: text; /*Here we are attaching the background color to text only*/
+    -webkit-text-fill-color: transparent; /*Setting the text color to transparent*/
+    background-clip: text;
+    color: transparent;
+    /*The webkit used above is relevent for webkit based browsers like safari firefox etc*/
+}
+
+.nav_links{
+    display: flex;
+    gap: 1rem;
+}
+
+.nav_links li a{
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav_links li a:hover{
+    color: #0077ff;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background-color: #eaf4fc; 
+}
+
+.hero h1{
+    font-size: 2.5rem;
+    margin-botton: 0.5rem;
+}
+
+.hero p{
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn_primary{
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #0077ff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn_primary:hover{
+    background-color: #005bb5;
+}
+
+.footer{
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: #393e46;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .btn-primary {
+      width: 100%;
+    }
+  }
+  
