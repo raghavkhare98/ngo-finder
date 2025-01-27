@@ -1,7 +1,12 @@
 asgiref==3.8.1
+distlib==0.3.9
 Django==5.1.5
 django-filter==24.3
 djangorestframework==3.15.2
+filelock==3.17.0
 Markdown==3.7
+platformdirs==4.3.6
+psycopg2==2.9.10
 python-decouple==3.8
 sqlparse==0.5.3
+virtualenv==20.29.1
