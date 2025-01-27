@@ -69,7 +69,10 @@ DATABASES = {
     # }
     'default':{
         'ENGINE': 'django.db.backends.postresql',
-        'NAME': 'ngo_finder',
+        'OPTIONS': {
+            'service',
+            'passfile'
+        }
     }
 }
 
