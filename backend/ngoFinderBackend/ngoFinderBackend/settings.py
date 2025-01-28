@@ -64,11 +64,11 @@ WSGI_APPLICATION = 'ngoFinderBackend.wsgi.application'
 
 DATABASES = {
     'default':{
-        'ENGINE': 'django.db.backends.postresql',
+        'ENGINE': 'django.db.backends.postgresql',
         'OPTIONS': {
             'service': 'db_service',
             'passfile': '.my_pgpass'
-        }
+        },
     }
 }
 
