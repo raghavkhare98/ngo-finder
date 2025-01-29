@@ -4,6 +4,9 @@ class City(models.Model):
 
     name = models.CharField(max_length=100, unique=True)
     
+    def __str__(self):
+        return self.name
+    
 class NGO(models.Model):
 
     ngo_name = models.CharField(max_length=255)
@@ -11,3 +14,5 @@ class NGO(models.Model):
     city = models.ForeignKey(City, on_delete=models.CASCADE, related_name='ngos')
     #will also have to create an event date column here
 
+    def __str__(self):
+        return self.name
