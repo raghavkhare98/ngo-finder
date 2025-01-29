@@ -19,6 +19,7 @@ ALLOWED_HOSTS = ['0.0.0.0'] #allowed host temporarily
 # Application definition
 
 INSTALLED_APPS = [
+    'api.apps.ApiConfig', #for postgres app
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -26,7 +27,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'api' #for postgres app
 ]
 
 MIDDLEWARE = [
