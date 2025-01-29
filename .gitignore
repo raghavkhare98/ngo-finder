@@ -1,8 +1,9 @@
-
-#random files
-ngo-list.txt
-
+#cache and other bytecompiled files
+__pycache__/
+.pyc
+#keys pathfiles
 .env
-
 .my_pgpass
 .pg_service.conf
+#random files
+ngo-list.txt
