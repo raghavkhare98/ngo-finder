@@ -1,7 +1,7 @@
 from django.db import models
 
 class City(models.Model):
-
+    #TODO: Add a zip code field in the City model class
     name = models.CharField(max_length=100, unique=True)
     
     def __str__(self):
