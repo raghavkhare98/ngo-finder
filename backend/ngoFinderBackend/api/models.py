@@ -12,7 +12,7 @@ class NGO(models.Model):
     ngo_name = models.CharField(max_length=255)
     description = models.TextField()
     city = models.ForeignKey(City, on_delete=models.CASCADE, related_name='ngos')
-    #will also have to create an event date column here
+    #TODO: Will also have to create an event date column here
 
     def __str__(self):
         return self.name
