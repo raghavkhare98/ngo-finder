@@ -19,21 +19,31 @@ class Command(BaseCommand):
         run_seed(self, options['mode'])
         self.stdout.write("seeding completed")
 
+cities = ['Waterloo', 'Kitchener', 'Cambridge', 'Guelph']
+
 def clear_data():
     logging.info('Clearing/Deleting data objects')
     NGO.objects.all().delete()
     City.objects.all().delete()
 
+def create_city():
+    for i in cities:
+        city = City(
+            city_name=i
+        )
+        city.save()
+    logging.info('City creation complete')
+    return city
 def create_ngos():
     logging.info('Creating data objects')
-    cities = ['Waterloo', 'Kitchener', 'Cambridge', 'Guelph']
+    rand_city = City.objects.order_by('?').first()
     ngos = NGO(
         ngo_name=fake.name(),
-        description=fake.text(),
-        city_name=random.choice(cities)
+        ngo_description=fake.text(),
+        ngo_city_name=rand_city
     )
     ngos.save()
-    logging.info('Creation complete')
+    logging.info('NGO creation complete')
     return ngos
 
     
@@ -41,5 +51,7 @@ def run_seed(self, mode):
     clear_data()
     if mode == MODE_CLEAR:
         return
+    
+    create_city()
     for _ in range(20):
         create_ngos()
