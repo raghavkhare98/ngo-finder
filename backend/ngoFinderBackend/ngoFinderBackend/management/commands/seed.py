@@ -16,4 +16,16 @@ class Command(BaseCommand):
         run_seed(self, options['mode'])
         self.stdout.write("seeding completed")
 
+def clear_data():
+    NGO.objects.all().delete()
+    City.objects.all().delete()
 
+def create_addresses():
+    pass
+
+def run_seed(self, mode):
+    clear_data()
+    if mode == MODE_CLEAR:
+        return
+    for i in range(20):
+        create_addresses()
