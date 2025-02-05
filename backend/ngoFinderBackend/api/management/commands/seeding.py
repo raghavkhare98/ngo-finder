@@ -36,7 +36,9 @@ def create_city():
     return city
 def create_ngos():
     logging.info('Creating data objects')
-    rand_city = City.objects.order_by('?').first()
+    # city = City.objects.order_by('?').first()
+    # print(f"Selected city: {city.city_name}") 
+    rand_city = City.objects.order_by('?').first() #we used the ? for order by because we want a random object
     ngos = NGO(
         ngo_name=fake.name(),
         ngo_description=fake.text(),
