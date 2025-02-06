@@ -15,5 +15,5 @@ class NGOsByCity(generics.ListAPIView):
     serializer_class = NGOSerializer
 
     def get_queryset(self):
-        city_name = self.kwargs['city']
-        return NGO.objects.filter(city__name=city_name)
+        city_name = self.kwargs['city_name']
+        return NGO.objects.filter(ngo_city_name__city_name=city_name)
