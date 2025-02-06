@@ -8,7 +8,17 @@ const cities = ["Waterloo", "Kitchener", "Cambridge", "Guelph"]
 
 export default function Cities({repo}){
 
+    /*
+    WILL WORK ON THIS WHEN WE ADD MORE CITIES
+    
+    async function getCityName(){
+        const response = await fetch("http://0.0.0.0:8000/api/cities/");
+        const data = await response.json();
+        console.log(data);
+    }
+    const cityNames = getCityName().then()*/
     return(
+        
         <div className={styles.container}>
             <Head>
                 <title>Connect | Cities</title>
@@ -18,7 +28,6 @@ export default function Cities({repo}){
                 <h1 className={styles.title}>Select your city</h1>
                 <div className={styles.city_list}>
                     {cities.map((city => (
-                        //we used / instead of \ because we would need to write \\ as a single \ would cause the escape character error
                         <button><Link key={city} href={`/ngo-list?city=${city}`}>  
                             {city}
                         </Link></button>

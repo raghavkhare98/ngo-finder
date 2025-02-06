@@ -24,7 +24,6 @@
 
 .city_list{
     display: flex;
-    /* flex-direction: column; */
     gap: 15px;
     justify-content: center;
     align-items: center;

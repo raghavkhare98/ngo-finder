@@ -26,34 +26,33 @@ def clear_data():
     NGO.objects.all().delete()
     City.objects.all().delete()
 
-def create_city():
-    for i in cities:
-        city = City(
-            city_name=i
-        )
+def create_cities():
+    city_objects = []
+    for city_name in cities:
+        city = City(city_name=city_name)
         city.save()
-    logging.info('City creation complete')
-    return city
+    logging.info(f'Created {len(city_objects)} cities.')
+
 def create_ngos():
     logging.info('Creating data objects')
-    # city = City.objects.order_by('?').first()
-    # print(f"Selected city: {city.city_name}") 
-    rand_city = City.objects.order_by('?').first() #we used the ? for order by because we want a random object
-    ngos = NGO(
-        ngo_name=fake.name(),
-        ngo_description=fake.text(),
-        ngo_city_name=rand_city
-    )
-    ngos.save()
-    logging.info('NGO creation complete')
-    return ngos
-
     
+    rand_city = City.objects.order_by('?').first()
+
+    ngos = NGO(
+        ngo_name=fake.company(),  
+        ngo_description=fake.text(),
+        ngo_city_name=rand_city 
+    )
+    
+    ngos.save()
+    logging.info("Created ngo")
+
+
 def run_seed(self, mode):
     clear_data()
     if mode == MODE_CLEAR:
-        return
+        return clear_data()
     
-    create_city()
-    for _ in range(20):
+    create_cities()
+    for i in range(10):
         create_ngos()
