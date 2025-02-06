@@ -21,7 +21,7 @@ export default function Cities({repo}){
         
         <div className={styles.container}>
             <Head>
-                <title>Connect | Cities</title>
+                <title>Careconnect | Cities</title>
             </Head>
             <Navbar />
             <main className={styles.content}>

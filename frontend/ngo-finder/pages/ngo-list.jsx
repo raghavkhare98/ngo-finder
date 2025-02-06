@@ -27,16 +27,17 @@ export default function NgoList(){
         
         <div className={styles.container}>
             <Head>
-                <title>Connect | {city}</title>
+                <title>Careconnect | {city}</title>
             </Head>
             <Navbar />
             <main className={styles.list_content}>
+                <h2>NGOs in {city}</h2>
                 <ul>
                     {ngos
                     .filter((ngo) => ngo.city_name === city)
                     .map((ngo) => (
                         <li key={ngo.id}>
-                            <h5>{ngo.ngo_name}</h5>
+                            <h4>{ngo.ngo_name}</h4>
                         </li>
                     ))}
                 </ul>

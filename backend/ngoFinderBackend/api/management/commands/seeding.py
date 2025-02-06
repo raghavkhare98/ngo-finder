@@ -5,8 +5,8 @@ from api.models import NGO, City
 import logging
 from faker import Faker
 
-MODE_REFRESH = 'refresh' #refreshes the db by clearing all previous data and creating new addresses
-MODE_CLEAR = 'clear' #just clears the data
+MODE_REFRESH = 'refresh' 
+MODE_CLEAR = 'clear'
 fake = Faker()
 
 class Command(BaseCommand):
@@ -27,11 +27,10 @@ def clear_data():
     City.objects.all().delete()
 
 def create_cities():
-    city_objects = []
     for city_name in cities:
         city = City(city_name=city_name)
         city.save()
-    logging.info(f'Created {len(city_objects)} cities.')
+    logging.info('Created cities')
 
 def create_ngos():
     logging.info('Creating data objects')

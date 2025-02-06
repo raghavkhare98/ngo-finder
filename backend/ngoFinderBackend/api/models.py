@@ -13,7 +13,7 @@ class NGO(models.Model):
     ngo_description = models.TextField()
     ngo_city_name = models.ForeignKey(City, on_delete=models.CASCADE, default='string')
     #TODO: Will also have to create an event date column here
-
+    #TODO: Add a link column and provide the homepage's link of the NGO
     def __str__(self):
         return self.ngo_name
 
