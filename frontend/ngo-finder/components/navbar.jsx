@@ -8,7 +8,7 @@ export default function Navbar(){
                 <ul className={styles.nav_links}>
                     <li><a href="/">Home</a></li>
                     <li><a href="/cities">Cities</a></li>
-                    
+                    <li><a href="/ngo-list">All NGOs</a></li>
                 </ul>
             </nav>
         </header>
