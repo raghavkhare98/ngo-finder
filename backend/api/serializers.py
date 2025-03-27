@@ -4,7 +4,7 @@ from .models import City, NGO
 class CitySerializer(serializers.ModelSerializer):
     class Meta:
         model = City
-        fields = '__all__'
+        fields = ['city_name']
 
 class NGOSerializer(serializers.ModelSerializer):
     
