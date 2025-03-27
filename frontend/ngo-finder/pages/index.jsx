@@ -21,7 +21,8 @@ export default function Home(){
             <main className={styles.hero}>
                 <h1>Welcome to CareConnect</h1>
                 <p>Find non-governemnts and their events near you in Ontario</p>
-                <button className={styles.btn_primary} onClick={onExploreButtonClick}>Explore cities</button>
+                {/* <button className={styles.btn_primary} onClick={onExploreButtonClick}>Explore cities</button> */}
+                <input placeholder="Enter a city"></input>
             </main>
             <Footer />
         </div>

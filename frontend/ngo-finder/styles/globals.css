@@ -11,7 +11,7 @@ Commenting for now because we will first implement vanilla css
 }
 
 body{
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     background-color: #f9fafb;
     color: #333;
     line-height: 1.6;
@@ -20,7 +20,6 @@ body{
 a{
     text-decoration: none;
     color: inherit; 
-    /* keeping this inherit because this is a global style file and we want links to have specific colors as needed */
 }
 
 ul{

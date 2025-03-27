@@ -8,7 +8,10 @@ return(
         
     <div className={styles.container}>
         <Head>
-            <title>Careconnect | {city || ""}</title>
+            {city ? 
+            <title>Careconnect | {city}</title>
+            :<title>Careconnect</title>}
+            
         </Head>
         <Navbar />
         <main className={styles.list_content}>

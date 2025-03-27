@@ -24,3 +24,7 @@
     padding-top: 25px;
     list-style: disc;
 }
+
+.list_content li{
+    margin-top: 10px;
+}
